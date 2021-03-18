@@ -17,10 +17,10 @@ public class PracticeController {
 	
 	@RequestMapping("hello")
 	public String hello(int num) {
-		int result[]= {0,0,0,0,0,0,0,0,0};
+		String result = "";
 		for(int i=1; i < 10; i++) {
-			result[i-1] = num*i;
+			result = result + num + "*" + i + "=" + num*i + " ";
 		}
-		return num+"*1="+result[0]+" "+num+"*2="+result[1]+" "+num+"*3="+result[2]+" "+num+"*4="+result[3]+" "+num+"*5="+result[4]+" "+num+"*6="+result[5]+" "+num+"*7="+result[6]+" "+num+"*8="+result[7]+" "+num+"*9="+result[8];
+		return result;
 	}
 }
