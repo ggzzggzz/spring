@@ -4,13 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>${title}</title>
+<title>${id}${title}</title>
 
 <link type="text/css" rel="stylesheet"
 	href="resource/res/css/sample.css" />
-	
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>	
 <script type="text/javaScript" language="javascript" defer="defer">
-    </script>
+$(function(){
+	for(i=0;i<${num};i++)
+		$("#tb").append('<tr><td align="center" class="listtd">1</td><td align="center" class="listtd"><a href="">C</a></td><td align="left" class="listtd">2학년&nbsp;</td><td align="center" class="listtd">Y&nbsp;</td><td align="center" class="listtd">기초과목&nbsp;</td><td align="center" class="listtd">관리자&nbsp;</td></tr>');
+});
+</script>
 </head>
 
 <body
@@ -22,6 +26,7 @@
 			<div id="title">
 				<ul>
 					<li><img src="/resource/res/img/title_dot.gif" alt="" />과목 목록</li>
+					<li>페이지 방문수 : ${count}</li>
 				</ul>
 			</div>
 			<!-- // 타이틀 -->
@@ -46,7 +51,7 @@
 			<!-- List -->
 			<div id="table">
 				<table width="100%" border="0" cellpadding="0" cellspacing="0"
-					summary="">
+					summary="" id="tb">
 					<caption style="visibility: hidden"></caption>
 					<colgroup>
 						<col width="40" />
