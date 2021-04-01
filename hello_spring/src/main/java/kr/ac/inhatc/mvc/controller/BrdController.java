@@ -21,6 +21,4 @@ public class BrdController {
 		mv.addObject("num", 15);
 		return mv;
 	}
-	
-
 }
